@@ -4,7 +4,7 @@
 
 This app scrapes The Jakarta Post website for articles and enters them to a Mongo database. Users are able to save articles as well as save and delete comments on these saved articles. Lastly, users are able to delete all articles, both saved and unsaved.
 
-Note to grader: I scraped each article's category instead of summary because The Jakarta Post does not display article summaries on its home page.
+Note to grader: I scraped each article's category instead of summary because The Jakarta Post does not display article summaries on its home page. Additionally, there is an issue with reloading the page after scraping; the user has to manually refresh the page after pressing the button to load the scraped articles.
 
 **How to Use**
 URL: https://limitless-savannah-12468.herokuapp.com/
