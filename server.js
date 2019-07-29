@@ -78,8 +78,6 @@ async function scrape() {
             result.link = $(element).find("a").attr("href");
             result.category = $(element).find(".date").children("span").text();
 
-            let exists = false;
-
             db.Article.find({ title: result.title }).then(function (data) {
                 if (result.link && result.category && !data.length) {
                     db.Article.create(result).then(dbArticle => {
@@ -88,10 +86,10 @@ async function scrape() {
                 }
             });
         });
-        // res.send("Scrape complete.");
+
         console.log("Finished");
     });
-    res.redirect("/");
+    res.send("Scrape complete.");
 }
 
 
